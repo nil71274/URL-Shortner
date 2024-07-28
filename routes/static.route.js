@@ -9,7 +9,7 @@ router.use(express.static(staticPath))
 
 router.get('/', restrictTo(["USER", "ADMIN"]), async (req, res)=>{
     const urls = await URL.find({createdBy:req.user._id});
-    res.render(`home`, {urls : urls})
+    res.render('home', {urls : urls})
 });
 
 router.get('/signup', (req, res)=>{

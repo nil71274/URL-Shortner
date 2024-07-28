@@ -9,6 +9,7 @@
         background-color: #ffe5f3;
         text-align: center;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding-bottom: 10%;
       }
       #container1 {
         background-color: #694f8e;
@@ -53,9 +54,6 @@
         <input type="url" name="url" placeholder="www.example.com" required />
         <button type="submit">Create</button>
       </form>
-      <% if(locals.id) { %>
-      <p>Your short url :<b>http://localhost:3000/url/<%= id %></b></p>
-      <% } %>
     </div>
     <br />
     <br />

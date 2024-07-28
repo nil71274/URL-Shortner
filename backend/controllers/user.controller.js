@@ -15,11 +15,15 @@ async function handleCreateUser(req, res){
 
 async function handleLoginUser(req, res){
     const {email, password} = req.body;
-    const user = await User.findOne({email, password});
+    const user = await User.findOne({email});
     if (!user) return res.render('login', {
         error: 'Invalid email or password'
     });
 
+    const passwordMatched = await User.matchPassword(user.password, password);
+    if(!passwordMatched) return res.render('login', {
+        error: 'Invalid email or password'
+    });
     // const sessionId = uuidv4();
     const token = setUser(user);
     res.cookie('token', token);

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body {
+        background-color: #ffe5f3;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      #container1 {
+        background-color: #694f8e;
+        padding: 20px;
+        margin: 5% 25% 5% 25%;
+      }
+      label {
+        color: #edd1f7;
+      }
+    </style>
+    <title>Signup</title>
+</head>
+<body style="text-align: center;">
+    <div id="container1">
+        <h1 style="color: white; font-weight: bold;">
+            Signup Page
+        </h1>
+        <div>
+            <form class="w3-container" action="/user" method="post">
+                <label >Enter your name: </label>
+                <input class="w3-input w3-round-xxlarge" type="text" placeholder="Nilesh Pawar" name='name' required>
+                <br>
+                <label >Enter your email: </label>
+                <input class="w3-input w3-round-xxlarge" type="email" placeholder="abc@xyz.com" name="email" required>
+                <br>
+                <label >Enter your password: </label>
+                <input class="w3-input w3-round-xxlarge" type="password" placeholder="******" name="password" required>
+                <br>
+                <button style="padding: 2% 10% 2% 10%;" class="w3-button w3-round-xxlarge w3-purple" type="submit">Signup</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
